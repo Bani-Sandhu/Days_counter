@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a1{
+            background-color: blue;
+            color: white;
+            text-align: center;
+            height: 80px;
+        }
+        .d4{
+            background-color: khaki;
+            margin-top: 20px;
+            height: 280px;
+            width: 500px;
+           
+        }
+        .d3{
+            text-align: center;
+            
+            
+        }
+        
+        body{
+            background-color:antiquewhite;
+        }
+        .h2{
+            background-color: white;
+            color: blue;
+            height: 5vh;
+            padding: 20px;
+            text-align: center;
+        }
+        #i1:active{
+            background: linear-gradient(to bottom right, blue,green,red);
+        }
+    </style>
+</head>
+<body>
+    <div class="d3">
+    <h1 class="a1">Codeyoung:Calculate days between dates</h1>
+       <center> <DIV class="d4">
+    <h1>Enter date 1: </h1><input type="date" id="d1">
+    <H1>Enter date 2: </H1><input type="date" id="d2">
+    <br><br><br>
+    <button onclick="Dates()" id="i1">Calculate number of days</button>
+        </DIV></center>
+    </div>
+    <script>
+        function Dates(){
+            const d1= document.getElementById("d1").value
+            const d2= document.getElementById("d2").value
+
+            let date1=new Date(d1)
+            let date2=new Date(d2)
+            var diff_in_time=date2.getTime()-date1.getTime();
+        var diff_in_date=Math.floor(Math.abs(diff_in_time/(24*60*60*1000)));
+        document.querySelector(".h2").innerHTML="Number of days between dates:"+(diff_in_date)
+        }
+    </script>
+    <br>
+    <hr>
+    <h1 class="h2">Number of days between dates:</h1>
+    
+</body>
+</html>
